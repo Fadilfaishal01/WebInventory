@@ -14,7 +14,7 @@ class Barang {
 class UI {
     static V_Barang() { // Display Books
         const DataBarang = Penyimpanan.AmbilBarang();
-
+        // const DataBarang = [];
         const D_Barang = DataBarang; // books
 
         D_Barang.forEach((barang) => UI.addBarangToList(barang));
@@ -80,11 +80,11 @@ class Penyimpanan {
         localStorage.setItem('barangs', JSON.stringify(barangs));
     }
 
-    static HapusBarang(HargaBarang) {
-        const barangs = Penyimpanan.AmbilBarang();
+    static HapusBarang(NamaBarang) {
+        const barangs = Penyimpanan.AmbilBarxang();
 
         barangs.forEach((barang, index) => {
-            if(barang.HargaBarang == HargaBarang) {
+            if(barang.NamaBarang = NamaBarang) {
                 barangs.splice(index, 1);
             }
         });
@@ -127,7 +127,7 @@ document.querySelector('#form-barang').addEventListener('submit', (e) => {
         UI.PesanNotifikasi('Berhasil Menambahkan Data Barang', 'success');
 
         // Hapus Form
-        UI.ClearField();
+        UI.ClearField();    
     }
 });
 
