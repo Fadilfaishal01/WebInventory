@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barang List</title>
+    <link rel="stylesheet" href="./assets/bootstrap.min.css">
+</head>
+<body>
+    
+    <div class="container mt-4">
+        <h1 class="text-center text-primary">Tokoqu</h1>
+
+        <form id="form-barang">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="font-weight-bold" for="NamaBarang">Nama Barang</label>
+                        <input type="text" id="NamaBarang" placeholder="Masukan Nama Barang" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="font-weight-bold" for="HargaBarang">Harga Barang</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>                            
+                            <input type="text" id="HargaBarang" placeholder="Masukan Harga Barang" class="form-control">
+                            <div class="input-group-append">
+                                <span class="input-group-text">.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="font-weight-bold" for="SatuanBarang">Satuan Barang</label>
+                        <select id="SatuanBarang" class="form-control">
+                            <option value="0">- Pilih Satuan Barang -</option>
+                            <option value="PCS">PCS</option>
+                            <option value="DUS">DUS</option>
+                            <option value="LUSIN">LUSIN</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-weight-bold" for="JumlahBarang">Jumlah Barang</label>
+                        <input type="text" id="JumlahBarang" placeholder="Masukan Jumlah Barang" class="form-control">
+                    </div>
+                </div>
+                <input type="submit" value="Tambah Barang" class="btn btn-primary w-25 ml-auto mr-auto mt-3">
+            </div>
+        </form>
+
+        <table class="table table-striped mt-4">
+            <thead>
+                <tr>
+                    <th>Nama Barang</th>
+                    <th>Harga Barang</th>
+                    <th>Total Barang</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="list-barang"></tbody>
+        </table>
+    </div>
+
+
+    <script src="./assets/app.js"></script>
+</body>
+</html>
