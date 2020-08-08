@@ -81,7 +81,7 @@ class Penyimpanan {
     }
 
     static HapusBarang(NamaBarang) {
-        const barangs = Penyimpanan.AmbilBarxang();
+        const barangs = Penyimpanan.AmbilBarang();
 
         barangs.forEach((barang, index) => {
             if(barang.NamaBarang = NamaBarang) {
